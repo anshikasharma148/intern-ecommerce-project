@@ -8,7 +8,11 @@ const config: Config = {
     './shared/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        primary:['font-family: "Poppins", sans-serif;']
+      },
+    },
   },
   plugins: [],
 };
