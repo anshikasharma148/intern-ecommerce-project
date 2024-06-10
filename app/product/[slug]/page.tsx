@@ -29,7 +29,7 @@ const ProductDetails = () => {
               <span className=" line-through text-slate-400">$21USD</span>
             </div>
 
-            <h3 className="text-xl font-bold mb-2">Overview :</h3> {/* Overview */}
+            <h3 className="text-xl font-bold mb-2 max-w-xl mx-auto">Overview :</h3> {/* Overview */}
             <p className="text-slate-400 max-w-xl mx-auto pb-2"> {/* Overview Description */}
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero exercitationem, unde
               molestiae sint quae inventore atque minima natus fugiat nihil quisquam voluptates ea
@@ -38,7 +38,7 @@ const ProductDetails = () => {
 
             <ul className="text-slate-400 max-w-xl mx-auto pb-2"> {/* Features List */}
               <li className="flex items-center mb-1">
-                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff8d0a">
+                <svg className=' me-2' width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff8d0a">
                   <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                   <g id="SVGRepo_iconCarrier">
@@ -49,7 +49,7 @@ const ProductDetails = () => {
                 Digital Marketing Solutions for Tomorrow
               </li>
               <li className="flex items-center mb-1">
-                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff8d0a">
+                <svg className=' me-2' width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff8d0a">
                   <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                   <g id="SVGRepo_iconCarrier">
@@ -60,7 +60,7 @@ const ProductDetails = () => {
                 Our Talented & Experienced Marketing Agency
               </li>
               <li className="flex items-center mb-1">
-                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff8d0a">
+                <svg className=' me-2' width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ff8d0a">
                   <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                   <g id="SVGRepo_iconCarrier">
@@ -104,7 +104,7 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            <div className="flex space-x-4 mt-4"> {/* Adjusted space between buttons */}
+            <div className="flex space-x-4 mt-9"> {/* Adjusted space between buttons */}
               <a href="#" className="relative py-3 px-8 inline-block font-semibold tracking-wide align-middle text-base text-center rounded-md bg-black text-white mt-1 h-12 transition-all duration-300 ease-in-out hover:bg-white hover:text-black border-2 border-transparent hover:border-black">
                 Add to Cart
               </a>

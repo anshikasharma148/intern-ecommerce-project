@@ -101,9 +101,9 @@ export default function Collection() {
   ];
 
   return (
-    <div className="text-center py-16">
-      <h2 className="text-4xl font-bold py-4">Shop by Collections</h2>
-      <p className="text-slate-400 max-w-xl mx-auto text-center pb-2">Explore our wide range of collections</p>
+    <div className="text-center py-16 max-w-[1200px] 2xl:max-w-[1440px]">
+      <h2 className="text-4xl font-bold py-4 ml-[4rem]">Shop by Collections</h2>
+      <p className="text-slate-400 max-w-xl text-center pb-2 ml-[29rem]">Explore our wide range of collections</p>
 
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
@@ -172,7 +172,7 @@ function Section({ title, collections }: SectionProps) {
   }
 
   return (
-    <div className="mb-16">
+    <div className="mb-16 max-w-[1200px] 2xl:max-w-[1440px] ml-[5rem]">
       <h3 className="text-2xl font-semibold mb-4">{title}</h3>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}

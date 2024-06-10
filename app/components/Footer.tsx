@@ -59,8 +59,8 @@ const footerClasses = {
 
 const Footer = () => {
   return (
-    <footer className={`${footerClasses.container} max-w-[1200px] 2xl:max-w-[1440px]`}>
-      <div className={footerClasses.grid}>
+    <footer className={footerClasses.container}>
+      <div className={`${footerClasses.grid} max-w-[1200px] 2xl:max-w-[1440px]`}>
         <div className='ml-[7rem]'>
           <h2 className="text-xl font-bold text-white">Cartzio</h2>
           <p className="mt-4">
