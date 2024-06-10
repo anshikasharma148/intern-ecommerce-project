@@ -27,7 +27,7 @@ export default function Hero() {
       >
         {[bg1, bg2, bg3].map((bg, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-full">
+            <div className="relative  h-full max-w-[1200px] 2xl:max-w-[1440px] mx-auto">
               <Image src={bg} alt={`bg${index + 1}`} layout="fill" objectFit="cover" className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center animate-slide-up">
                 <div className="text-center px-8 text-white">
