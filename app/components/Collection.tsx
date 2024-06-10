@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
 
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
@@ -62,8 +61,8 @@ export default function Collection() {
           <SwiperSlide key={index}>
             <div className="flex justify-center space-x-8 md:flex-row flex-col md:flex-wrap">
               {group.map((collection, idx) => (
-                <div key={idx} className={`flex flex-col items-center ${idx === 1 && index !== 0 ? 'md:mt-8' : ''}`}>
-                  <div className="w-48 h-48 rounded-full overflow-hidden">
+                <div key={idx} className={`flex flex-col items-center ${idx === 1 && index !== 0 ? 'md:mt-8' : ''} group`}>
+                  <div className="w-48 h-48 rounded-full overflow-hidden transform transition-transform duration-300 group-hover:scale-110">
                     <Image
                       src={collection.imgSrc}
                       alt={collection.title}
@@ -72,7 +71,7 @@ export default function Collection() {
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <p className="mt-4 text-lg font-medium">{collection.title}</p>
+                  <p className="mt-4 text-lg font-medium transition-colors duration-300 group-hover:text-orange-500 cursor-pointer">{collection.title}</p>
                 </div>
               ))}
             </div>

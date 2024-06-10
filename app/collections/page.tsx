@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -113,7 +113,7 @@ export default function Collection() {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
         effect="fade"
-        className="swiper-container"
+        className="swiper-container mb-16"
       >
         {mensCollections.concat(womensCollections, kidsCollections, beautyCollections, appliancesCollections, technologyCollections).map((collection, index) => (
           <SwiperSlide key={index}>
