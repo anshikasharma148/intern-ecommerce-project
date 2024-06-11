@@ -105,9 +105,9 @@ const ProductDetails = () => {
             </div>
 
             <div className="flex space-x-4 mt-9"> {/* Adjusted space between buttons */}
-              <a href="#" className="relative py-3 px-8 inline-block font-semibold tracking-wide align-middle text-base text-center rounded-md bg-black text-white mt-1 h-12 transition-all duration-300 ease-in-out hover:bg-white hover:text-black border-2 border-transparent hover:border-black">
+              {/* <a href="#" className="relative py-3 px-8 inline-block font-semibold tracking-wide align-middle text-base text-center rounded-md bg-black text-white mt-1 h-12 transition-all duration-300 ease-in-out hover:bg-white hover:text-black border-2 border-transparent hover:border-black">
                 Add to Cart
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
