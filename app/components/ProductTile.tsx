@@ -11,7 +11,7 @@ const productPriceClasses = 'text-xl font-bold';
 const productOldPriceClasses = 'text-zinc-500 line-through ml-2';
 const productRatingClasses = 'text-yellow-500';
 
-const ProductCard: React.FC<ProductCardProps> = ({ isRectangle }) => {
+const ProductCard: React.FC<ProductCardProps> = ({isRectangle}) => {
   const cardClassNames = isRectangle
     ? `${productCardClasses} w-229 h-298`
     : productCardClasses;
@@ -28,7 +28,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ isRectangle }) => {
           New
         </span>
         <button className="absolute top-2 right-2 bg-white p-1 rounded-full">
-          <img aria-hidden="true" alt="wishlist" src="/icons/wishlist.svg" />
+          <img
+            aria-hidden="true"
+            alt="wishlist"
+            src="/icons/wishlist.svg"
+          />
         </button>
         <button className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity text-white text-lg font-bold">
           Add to cart
