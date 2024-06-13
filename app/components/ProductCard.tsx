@@ -86,6 +86,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
 const ProductGrid: React.FC<{ products: Product[] }> = ({ products }) => {
   return (
     <div className="max-w-[1200px] 2xl:max-w-[1440px] mx-auto px-8 py-8">
+      
       <h2 className="text-4xl font-bold py-4 text-center">New Arrival Products</h2>
       <p className="text-slate-400 max-w-xl mx-auto text-center pb-2">
         Shop the latest products from the most popular collections

@@ -1,0 +1,2 @@
+'use strict';jQuery(document).ready(function($){$('.demo-directional .show-demo').on('click',function(e){e.preventDefault();$(this).parents('.demo-directional').toggleClass('open')});$('.demo-directional .close').on('click',function(e){e.preventDefault();$(this).parents('.demo-directional').toggleClass('open')})})
+;

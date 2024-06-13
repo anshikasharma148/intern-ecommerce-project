@@ -1,3 +1,5 @@
+// src/components/Hero.tsx
+
 'use client';
 
 import React from 'react';
@@ -9,12 +11,15 @@ import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import { Pagination } from 'swiper/modules';
 
+import { BannerImage } from 'E:/intern-ecommerce-project/models/banner';
 
-import bg1 from 'E:/intern-ecommerce-project/public/bg1.jpg';
-import bg2 from 'E:/intern-ecommerce-project/public/bg2.jpg';
-import bg3 from 'E:/intern-ecommerce-project/public/bg3.jpg';
+interface HeroProps {
+  storebanner: BannerImage[];
+}
 
-export default function Hero() {
+const Hero: React.FC<HeroProps> = ({ storebanner }) => {
+  console.log(storebanner);
+
   return (
     <>
       <Swiper
@@ -25,11 +30,17 @@ export default function Hero() {
         autoplay={{ delay: 5000 }}
         style={{ height: '100vh' }}
       >
-        {[bg1, bg2, bg3].map((bg, index) => (
+        {storebanner.map((banner, index) => (
           <SwiperSlide key={index}>
-            <div className="relative  h-full max-w-[1200px] 2xl:max-w-[1440px] mx-auto">
-              <Image src={bg} alt={`bg${index + 1}`} layout="fill" objectFit="cover" className="h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center animate-slide-up">
+            <div className="relative h-full mx-auto">
+              <Image
+                src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${banner.url}`}
+                alt={`Banner ${index + 1}`}
+                layout="fill"
+                objectFit="cover"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center animate-slide-up">
                 <div className="text-center px-8 text-white">
                   {/* Content Here */}
                 </div>
@@ -38,7 +49,7 @@ export default function Hero() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <style jsx>{`
+      <style jsx global>{`
         @keyframes slide-up {
           from {
             transform: translateY(100%);
@@ -49,7 +60,30 @@ export default function Hero() {
             opacity: 1;
           }
         }
+
+        /* Custom Styles for Swiper Pagination Bullets */
+        .swiper-pagination-bullet {
+          background-color: white !important; /* White color for non-active bullets */
+          opacity: 1 !important; /* Ensuring full opacity */
+          width: 12px; /* Size adjustments for the bullets */
+          height: 12px; /* Size adjustments for the bullets */
+          margin: 0 4px; /* Space between bullets */
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: #ff6600 !important; /* Custom color for the active bullet */
+          width: 12px; /* Ensure active bullet size is consistent */
+          height: 12px; /* Ensure active bullet size is consistent */
+        }
+
+        /* Optional: Add some transition effect to bullet change */
+        .swiper-pagination-bullet,
+        .swiper-pagination-bullet-active {
+          transition: background-color 0.3s ease;
+        }
       `}</style>
     </>
   );
-}
+};
+
+export default Hero;
