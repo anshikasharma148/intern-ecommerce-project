@@ -1,13 +1,19 @@
-export interface Product {
+// src/types.ts
+export type Product = {
   title: string;
-  stockStatus: 'IN_STOCK' | 'OUT_OF_STOCK';
+  stockStatus: string;
   slug: string;
+  type: string;
   salesPrice: number;
   price: number;
   id: string;
   featureImage: string;
-}
+};
 
-export interface HomePageData {
-  featuredProducts: Product[];
-}
+export type CollectionData = {
+  id: string;
+  slug: string;
+  title: string;
+  featureImage: string;
+  Product: Product[];
+};

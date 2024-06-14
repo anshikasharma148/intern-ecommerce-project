@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import jacket from 'E:/intern-ecommerce-project/public/jacket.jpg';
+//import jacket from 'E:/intern-ecommerce-project/public/jacket.jpg';
 
 // const sharedClasses = {
 //   button: 'px-3 py-2 border rounded-md text-sm mx-1', // Adjusted padding and font size
@@ -42,7 +42,7 @@ const ProductDetails = () => {
           {/* Layout adjustment */}
           <div className="flex-1">
             <Image
-              src={jacket}
+              src='/jacket.jpg'
               alt="jacket img"
               width={400}
               height={533}

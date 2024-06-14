@@ -1,8 +1,11 @@
+// src/components/Collection.tsx
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+
 import { Pagination, Autoplay } from 'swiper/modules';
 import { CollectionData } from '../../models/collection';
 
@@ -39,7 +42,7 @@ const Collection: React.FC<CollectionProps> = ({ collections }) => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000 }}
         className="mt-8 mx-auto max-w-screen-lg"
-        style={{ height: '50vh' }}
+        style={{ height: '50vh' }} // Reduced height to fit within screen
       >
         {groupedCollections.map((group, slideIndex) => (
           <SwiperSlide key={slideIndex}>
@@ -84,6 +87,7 @@ const Collection: React.FC<CollectionProps> = ({ collections }) => {
           width: 12px;
           height: 12px;
           margin: 0 4px;
+          
         }
 
         .swiper-pagination-bullet-active {

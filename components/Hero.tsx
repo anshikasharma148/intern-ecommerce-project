@@ -1,3 +1,5 @@
+// src/components/Hero.tsx
+
 'use client';
 
 import React from 'react';
@@ -5,7 +7,10 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Autoplay, Pagination } from 'swiper/modules';
+
+import { Autoplay } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
+
 import { BannerImage } from 'E:/intern-ecommerce-project/models/banner';
 
 interface HeroProps {
@@ -13,6 +18,7 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ storebanner }) => {
+
   return (
     <div className="relative">
       <Swiper

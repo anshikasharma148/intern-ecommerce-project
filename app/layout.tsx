@@ -1,7 +1,7 @@
 //import Link from 'next/link';
 import './globals.css';
-import Navbar from './components/Nav';
-import Footer from './components/Footer';
+import Navbar from '../components/Nav';
+import Footer from '../components/Footer';
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
