@@ -36,7 +36,7 @@ const ProductCard: React.FC<{product: Product}> = ({product}) => {
         style={{height: '70%'}}
       >
         <Image
-          src={image}
+          src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${image}`}
           alt={name}
           layout="fill"
           className="object-cover transition-transform transform group-hover:scale-110 duration-300 ease-in-out"
