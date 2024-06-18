@@ -23,51 +23,51 @@ interface SectionProps {
 
 export default function Collection() {
   const mensCollections: CollectionItem[] = [
-    {title: "Men's Fashion", imgSrc: "/Men/man.jpg"},
-    {title: "Men's Clothing", imgSrc: "/Men/man.jpg"},
-    {title: "Men's Accessories", imgSrc: "/Men/maccess.png"},
-    {title: "Men's Shoes", imgSrc: "/Men/shoes.jpg"},
-    {title: "Men's Formal Wear", imgSrc: "/Men/formal.webp"},
+    {title: "Men's Fashion", imgSrc: '/Men/man.jpg'},
+    {title: "Men's Clothing", imgSrc: '/Men/man.jpg'},
+    {title: "Men's Accessories", imgSrc: '/Men/maccess.png'},
+    {title: "Men's Shoes", imgSrc: '/Men/shoes.jpg'},
+    {title: "Men's Formal Wear", imgSrc: '/Men/formal.webp'},
   ];
 
   const womensCollections: CollectionItem[] = [
-    {title: "Women's Fashion", imgSrc: "/women/ladies.jpg"},
-    {title: "Women's Clothing", imgSrc: "/women/waccess.png"},
-    {title: "Women's Accessories", imgSrc: "/Men/formal.webp"},
-    {title: "Women's Shoes", imgSrc: "/Men/formal.webp"},
-    {title: "Women's Dresses", imgSrc: "/Men/formal.webp"},
+    {title: "Women's Fashion", imgSrc: '/women/ladies.jpg'},
+    {title: "Women's Clothing", imgSrc: '/women/waccess.png'},
+    {title: "Women's Accessories", imgSrc: '/Men/formal.webp'},
+    {title: "Women's Shoes", imgSrc: '/Men/formal.webp'},
+    {title: "Women's Dresses", imgSrc: '/Men/formal.webp'},
   ];
 
   const kidsCollections: CollectionItem[] = [
-    {title: "Kids' Fashion", imgSrc: "/Men/formal.webp"},
-    {title: "Boys' Wear", imgSrc: "/Men/formal.webp"},
-    {title: "Girls' Wear", imgSrc: "/Men/formal.webp"},
-    {title: "Kids' Accessories", imgSrc: "/Men/formal.webp"},
-    {title: "Kids' Shoes", imgSrc: "/Men/formal.webp"},
+    {title: "Kids' Fashion", imgSrc: '/Men/formal.webp'},
+    {title: "Boys' Wear", imgSrc: '/Men/formal.webp'},
+    {title: "Girls' Wear", imgSrc: '/Men/formal.webp'},
+    {title: "Kids' Accessories", imgSrc: '/Men/formal.webp'},
+    {title: "Kids' Shoes", imgSrc: '/Men/formal.webp'},
   ];
 
   const beautyCollections: CollectionItem[] = [
-    {title: 'Beauty Products', imgSrc: "/Men/formal.webp"},
-    {title: 'Makeup', imgSrc: "/Men/formal.webp"},
-    {title: 'Skincare', imgSrc: "/Men/formal.webp"},
-    {title: 'Haircare', imgSrc: "/Men/formal.webp"},
-    {title: 'Fragrances', imgSrc: "/Men/formal.webp"},
+    {title: 'Beauty Products', imgSrc: '/Men/formal.webp'},
+    {title: 'Makeup', imgSrc: '/Men/formal.webp'},
+    {title: 'Skincare', imgSrc: '/Men/formal.webp'},
+    {title: 'Haircare', imgSrc: '/Men/formal.webp'},
+    {title: 'Fragrances', imgSrc: '/Men/formal.webp'},
   ];
 
   const appliancesCollections: CollectionItem[] = [
-    {title: 'Electrical Appliances', imgSrc: "/Men/formal.webp"},
-    {title: 'Kitchen Appliances', imgSrc: "/Men/formal.webp"},
-    {title: 'Home Appliances', imgSrc: "/Men/formal.webp"},
-    {title: 'Personal Care Appliances', imgSrc: "/Men/formal.webp"},
-    {title: 'Gadgets & Accessories', imgSrc: "/Men/formal.webp"},
+    {title: 'Electrical Appliances', imgSrc: '/Men/formal.webp'},
+    {title: 'Kitchen Appliances', imgSrc: '/Men/formal.webp'},
+    {title: 'Home Appliances', imgSrc: '/Men/formal.webp'},
+    {title: 'Personal Care Appliances', imgSrc: '/Men/formal.webp'},
+    {title: 'Gadgets & Accessories', imgSrc: '/Men/formal.webp'},
   ];
 
   const technologyCollections: CollectionItem[] = [
-    {title: 'Technology', imgSrc: "/Men/formal.webp"},
-    {title: 'Mobile Phones', imgSrc: "/Men/formal.webp"},
-    {title: 'Computers & Laptops', imgSrc: "/Men/formal.webp"},
-    {title: 'Tablets & E-Readers', imgSrc: "/Men/formal.webp"},
-    {title: 'Gaming', imgSrc: "/Men/formal.webp"},
+    {title: 'Technology', imgSrc: '/Men/formal.webp'},
+    {title: 'Mobile Phones', imgSrc: '/Men/formal.webp'},
+    {title: 'Computers & Laptops', imgSrc: '/Men/formal.webp'},
+    {title: 'Tablets & E-Readers', imgSrc: '/Men/formal.webp'},
+    {title: 'Gaming', imgSrc: '/Men/formal.webp'},
   ];
 
   return (

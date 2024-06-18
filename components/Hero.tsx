@@ -10,11 +10,9 @@ import 'swiper/css/pagination';
 
 import {Autoplay} from 'swiper/modules';
 import {Pagination} from 'swiper/modules';
-import { BannerImage } from '@/models/banner';
+import {BannerImage} from '@/models/banner';
 
-
-
-export default function Hero({storebanner}:{storebanner:BannerImage[]}) {
+export default function Hero({storebanner}: {storebanner: BannerImage[]}) {
   return (
     <div className="relative">
       <Swiper
@@ -25,7 +23,7 @@ export default function Hero({storebanner}:{storebanner:BannerImage[]}) {
         autoplay={{delay: 5000}}
         style={{height: '100vh'}}
       >
-        {storebanner.map((banner:BannerImage, index:number) => (
+        {storebanner.map((banner: BannerImage, index: number) => (
           <SwiperSlide key={index}>
             <div className="relative h-full mx-auto">
               <Image

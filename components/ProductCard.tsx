@@ -125,14 +125,24 @@ const ProductGrid: React.FC<{products: Product[]}> = ({products}) => {
 };
 
 const sampleProducts: Product[] = [
-  {name: 'T-Shirt', image: "/tshirt.jpg", price: 16, oldPrice: 21},
-  {name: 'Fashion Shoes Sneaker', image: "/tshirt.jpg", price: 18, oldPrice: null},
-  {name: 'Mens White Slip Shoes', image: "/tshirt.jpg", price: 20, oldPrice: 25},
-  {name: 'Ladies Luxurious Bag', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
-  {name: 'Ladies Green Top', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
-  {name: 'Ladies Onepiece Wear', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
-  {name: 'Mens Brown Jacket', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
-  {name: 'Sweater T-Shirt', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
+  {name: 'T-Shirt', image: '/tshirt.jpg', price: 16, oldPrice: 21},
+  {
+    name: 'Fashion Shoes Sneaker',
+    image: '/tshirt.jpg',
+    price: 18,
+    oldPrice: null,
+  },
+  {
+    name: 'Mens White Slip Shoes',
+    image: '/tshirt.jpg',
+    price: 20,
+    oldPrice: 25,
+  },
+  {name: 'Ladies Luxurious Bag', image: '/tshirt.jpg', price: 22, oldPrice: 27},
+  {name: 'Ladies Green Top', image: '/tshirt.jpg', price: 22, oldPrice: 27},
+  {name: 'Ladies Onepiece Wear', image: '/tshirt.jpg', price: 22, oldPrice: 27},
+  {name: 'Mens Brown Jacket', image: '/tshirt.jpg', price: 22, oldPrice: 27},
+  {name: 'Sweater T-Shirt', image: '/tshirt.jpg', price: 22, oldPrice: 27},
 ];
 
 const App: React.FC = () => {
