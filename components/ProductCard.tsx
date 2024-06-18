@@ -1,21 +1,12 @@
 import React from 'react';
-import type {StaticImageData} from 'next/image';
 import Image from 'next/image';
 
 // Import product images
-import tshirt from 'E:/intern-ecommerce-project/public/tshirt.jpg';
-import shoes from 'E:/intern-ecommerce-project/public/shoes.jpg';
-import onepiece from 'E:/intern-ecommerce-project/public/onepiece.jpg';
-import jacket from 'E:/intern-ecommerce-project/public/jacket.jpg';
-import greentop from 'E:/intern-ecommerce-project/public/green top.jpg';
-import bag from 'E:/intern-ecommerce-project/public/bag.jpg';
-import slipshoes from 'E:/intern-ecommerce-project/public/slipshoes.jpg';
-import sweatshirt from 'E:/intern-ecommerce-project/public/sweatertshirt.jpg';
 
 // Define product interface
 interface Product {
   name: string;
-  image: StaticImageData;
+  image: string;
   price: number;
   oldPrice?: number | null;
 }
@@ -134,14 +125,14 @@ const ProductGrid: React.FC<{products: Product[]}> = ({products}) => {
 };
 
 const sampleProducts: Product[] = [
-  {name: 'T-Shirt', image: tshirt, price: 16, oldPrice: 21},
-  {name: 'Fashion Shoes Sneaker', image: shoes, price: 18, oldPrice: null},
-  {name: 'Mens White Slip Shoes', image: slipshoes, price: 20, oldPrice: 25},
-  {name: 'Ladies Luxurious Bag', image: bag, price: 22, oldPrice: 27},
-  {name: 'Ladies Green Top', image: greentop, price: 22, oldPrice: 27},
-  {name: 'Ladies Onepiece Wear', image: onepiece, price: 22, oldPrice: 27},
-  {name: 'Mens Brown Jacket', image: jacket, price: 22, oldPrice: 27},
-  {name: 'Sweater T-Shirt', image: sweatshirt, price: 22, oldPrice: 27},
+  {name: 'T-Shirt', image: "/tshirt.jpg", price: 16, oldPrice: 21},
+  {name: 'Fashion Shoes Sneaker', image: "/tshirt.jpg", price: 18, oldPrice: null},
+  {name: 'Mens White Slip Shoes', image: "/tshirt.jpg", price: 20, oldPrice: 25},
+  {name: 'Ladies Luxurious Bag', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
+  {name: 'Ladies Green Top', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
+  {name: 'Ladies Onepiece Wear', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
+  {name: 'Mens Brown Jacket', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
+  {name: 'Sweater T-Shirt', image:  "/tshirt.jpg", price: 22, oldPrice: 27},
 ];
 
 const App: React.FC = () => {

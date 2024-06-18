@@ -10,14 +10,11 @@ import 'swiper/css/pagination';
 
 import {Autoplay} from 'swiper/modules';
 import {Pagination} from 'swiper/modules';
+import { BannerImage } from '@/models/banner';
 
-import {BannerImage} from 'E:/intern-ecommerce-project/models/banner';
 
-interface HeroProps {
-  storebanner: BannerImage[];
-}
 
-const Hero: React.FC<HeroProps> = ({storebanner}) => {
+export default function Hero({storebanner}:{storebanner:BannerImage[]}) {
   return (
     <div className="relative">
       <Swiper
@@ -28,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({storebanner}) => {
         autoplay={{delay: 5000}}
         style={{height: '100vh'}}
       >
-        {storebanner.map((banner, index) => (
+        {storebanner.map((banner:BannerImage, index:number) => (
           <SwiperSlide key={index}>
             <div className="relative h-full mx-auto">
               <Image
@@ -98,6 +95,4 @@ const Hero: React.FC<HeroProps> = ({storebanner}) => {
       `}</style>
     </div>
   );
-};
-
-export default Hero;
+}

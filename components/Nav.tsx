@@ -1,7 +1,6 @@
 'use client';
 import {useState, useEffect} from 'react';
 import Image from 'next/image';
-import logo from 'E:/intern-ecommerce-project/public/logo.png';
 
 export default function Widget() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +34,7 @@ export default function Widget() {
           {/* Logo Container */}
           <div className="flex items-center">
             <Image
-              src={logo}
+              src={"/logo.png'"}
               alt="logo"
               width={150}
               height={300}

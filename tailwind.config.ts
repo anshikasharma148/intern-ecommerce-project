@@ -7,13 +7,6 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './shared/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {
-    extend: {
-      fontFamily: {
-        primary: ['font-family: "Poppins", sans-serif;'],
-      },
-    },
-  },
   plugins: [],
 };
 export default config;
