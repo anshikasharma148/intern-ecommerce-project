@@ -1,48 +1,17 @@
-'use client';
+'use client'
 import React from 'react';
-import Image, {StaticImageData} from 'next/image';
+import Image from 'next/image';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {Navigation, Pagination, Autoplay, EffectFade} from 'swiper/modules';
 
-// Import images
-import mens from 'E:/intern-ecommerce-project/public/Men/man.jpg';
-import clothing from 'E:/intern-ecommerce-project/public/Men/man.jpg';
-import formal from 'E:/intern-ecommerce-project/public/Men/formal.webp';
-import access from 'E:/intern-ecommerce-project/public/Men/maccess.png';
-import shoes from 'E:/intern-ecommerce-project/public/Men/shoes.jpg';
-import ladies from 'E:/intern-ecommerce-project/public/women/ladies.jpg';
-import waccess from 'E:/intern-ecommerce-project/public/women/waccess.png';
-import cloth from 'E:/intern-ecommerce-project/public/women/cloth.png';
-import dress from 'E:/intern-ecommerce-project/public/women/dress.jpg';
-import wshoes from 'E:/intern-ecommerce-project/public/women/wshoes.jpg';
-import boys from 'E:/intern-ecommerce-project/public/kids/boys.jpg';
-import kaccess from 'E:/intern-ecommerce-project/public/kids/kaccess.jpg';
-import kcloth from 'E:/intern-ecommerce-project/public/kids/kcloth.jpg';
-import kids from 'E:/intern-ecommerce-project/public/kids/kids.jpg';
-import kshoes from 'E:/intern-ecommerce-project/public/kids/kshoes.jpg';
-import beauty from 'E:/intern-ecommerce-project/public/beauty/beauty.jpg';
-import frag from 'E:/intern-ecommerce-project/public/beauty/frag.webp';
-import hair from 'E:/intern-ecommerce-project/public/beauty/haircare.webp';
-import makeup from 'E:/intern-ecommerce-project/public/beauty/makeup.jpg';
-import skin from 'E:/intern-ecommerce-project/public/beauty/skincare.jpg';
-import elec from 'E:/intern-ecommerce-project/public/electrical/elec.jpg';
-import gadgets from 'E:/intern-ecommerce-project/public/electrical/gadgets.jpg';
-import home from 'E:/intern-ecommerce-project/public/electrical/home.jpg';
-import kitchen from 'E:/intern-ecommerce-project/public/electrical/kitchen.jpg';
-import personal from 'E:/intern-ecommerce-project/public/electrical/personal.jpg';
-import gaming from 'E:/intern-ecommerce-project/public/technology/gaming.jpg';
-import laptop from 'E:/intern-ecommerce-project/public/technology/laptop.webp';
-import mobile from 'E:/intern-ecommerce-project/public/technology/mobile.jpg';
-import tablet from 'E:/intern-ecommerce-project/public/technology/tablets.webp';
-import tech from 'E:/intern-ecommerce-project/public/technology/tech.jpg';
 
 // Define CollectionItem interface
 interface CollectionItem {
   title: string;
-  imgSrc: StaticImageData;
+  imgSrc: string;
 }
 
 // Define SectionProps interface
@@ -53,52 +22,53 @@ interface SectionProps {
 
 export default function Collection() {
   const mensCollections: CollectionItem[] = [
-    {title: "Men's Fashion", imgSrc: mens},
-    {title: "Men's Clothing", imgSrc: clothing},
-    {title: "Men's Accessories", imgSrc: access},
-    {title: "Men's Shoes", imgSrc: shoes},
-    {title: "Men's Formal Wear", imgSrc: formal},
+    {title: "Men's Fashion", imgSrc: '/Men/man.jpg'},
+    {title: "Men's Clothing", imgSrc: '/Men/man.jpg'},
+    {title: "Men's Accessories", imgSrc: '/Men/maccess.png'},
+    {title: "Men's Shoes", imgSrc: '/Men/shoes.jpg' },
+    {title: "Men's Formal Wear", imgSrc: '/Men/formal.webp'},
   ];
 
   const womensCollections: CollectionItem[] = [
-    {title: "Women's Fashion", imgSrc: ladies},
-    {title: "Women's Clothing", imgSrc: cloth},
-    {title: "Women's Accessories", imgSrc: waccess},
-    {title: "Women's Shoes", imgSrc: wshoes},
-    {title: "Women's Dresses", imgSrc: dress},
+    {title: "Women's Fashion", imgSrc: "/women/ladies.jpg"},
+    {title: "Women's Clothing", imgSrc: '/women/cloth.png'},
+    {title: "Women's Accessories", imgSrc: '/women/waccess.png'},
+    {title: "Women's Shoes", imgSrc: '/women/wshoes.jpg'},
+    {title: "Women's Dresses", imgSrc:'/women/dress.jpg'},
   ];
 
   const kidsCollections: CollectionItem[] = [
-    {title: "Kids' Fashion", imgSrc: kids},
-    {title: "Boys' Wear", imgSrc: boys},
-    {title: "Girls' Wear", imgSrc: kcloth},
-    {title: "Kids' Accessories", imgSrc: kaccess},
-    {title: "Kids' Shoes", imgSrc: kshoes},
+    {title: "Kids' Fashion", imgSrc: "/kids/kids.jpg"},
+    {title: "Boys' Wear", imgSrc: "/kids/boys.jpg"},
+    {title: "Girls' Wear", imgSrc: "/kids/kcloth.jpg"},
+    {title: "Kids' Accessories", imgSrc:"/kids/kaccess.jpg"},
+    {title: "Kids' Shoes", imgSrc: "/kids/kshoes.jpg"},
   ];
 
   const beautyCollections: CollectionItem[] = [
-    {title: 'Beauty Products', imgSrc: beauty},
-    {title: 'Makeup', imgSrc: makeup},
-    {title: 'Skincare', imgSrc: skin},
-    {title: 'Haircare', imgSrc: hair},
-    {title: 'Fragrances', imgSrc: frag},
+    {title: 'Beauty Products', imgSrc: '/beauty/beauty.jpg'},
+    {title: 'Makeup', imgSrc:'/beauty/makeup.jpg' },
+    {title: 'Skincare', imgSrc: "/beauty/skincare.jpg"},
+    {title: 'Haircare', imgSrc: "/beauty/haircare.webp"},
+    {title: 'Fragrances', imgSrc: "/beauty/frag.webp"},
   ];
 
   const appliancesCollections: CollectionItem[] = [
-    {title: 'Electrical Appliances', imgSrc: elec},
-    {title: 'Kitchen Appliances', imgSrc: kitchen},
-    {title: 'Home Appliances', imgSrc: home},
-    {title: 'Personal Care Appliances', imgSrc: personal},
-    {title: 'Gadgets & Accessories', imgSrc: gadgets},
+    {title: 'Electrical Appliances', imgSrc: '/electrical/elec.jpg'},
+    {title: 'Kitchen Appliances', imgSrc: '/electrical/kitchen.jpg'},
+    {title: 'Home Appliances', imgSrc: '/electrical/home.jpg'},
+    {title: 'Personal Care Appliances', imgSrc: '/electrical/personal.jpg'},
+    {title: 'Gadgets & Accessories', imgSrc: '/electrical/gadgets.jpg'},
   ];
 
   const technologyCollections: CollectionItem[] = [
-    {title: 'Technology', imgSrc: tech},
-    {title: 'Mobile Phones', imgSrc: mobile},
-    {title: 'Computers & Laptops', imgSrc: laptop},
-    {title: 'Tablets & E-Readers', imgSrc: tablet},
-    {title: 'Gaming', imgSrc: gaming},
+    {title: 'Technology', imgSrc: '/technology/tech.jpg'},
+    {title: 'Mobile Phones', imgSrc: '/technology/mobile.jpg'},
+    {title: 'Computers & Laptops', imgSrc: '/technology/laptop.webp'},
+    {title: 'Tablets & E-Readers', imgSrc: '/technology/tablets.webp'},
+    {title: 'Gaming', imgSrc: '/technology/gaming.jpg'},
   ];
+
 
   return (
     <div className="text-center py-16 max-w-[1200px] 2xl:max-w-[1440px]">
