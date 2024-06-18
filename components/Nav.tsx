@@ -34,8 +34,8 @@ export default function Widget() {
           {/* Logo Container */}
           <div className="flex items-center">
             <Image
-              src={"/logo.png'"}
-              alt="logo"
+              src={"/logo.png"}
+              alt="logo"  
               width={150}
               height={300}
               style={{width: 'auto', height: '100%'}}
