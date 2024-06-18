@@ -279,7 +279,7 @@ const Footer = () => {
               className={footerClasses.featureItem}
             >
               <img
-                  src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${feature.icon}`}
+                src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${feature.icon}`}
                 alt={feature.name}
                 aria-hidden="true"
               />

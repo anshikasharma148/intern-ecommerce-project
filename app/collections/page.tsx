@@ -99,7 +99,7 @@ export default function Collection() {
             <SwiperSlide key={index}>
               <div className="relative">
                 <Image
-                     src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${collection.imgSrc}`}
+                  src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${collection.imgSrc}`}
                   alt={collection.title}
                   layout="fill"
                   objectFit="cover"
@@ -193,7 +193,7 @@ function Section({title, collections}: SectionProps) {
                 >
                   <div className="w-48 h-48 rounded-full overflow-hidden transition-transform duration-300 transform group-hover:scale-110">
                     <Image
-                       src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${collection.imgSrc}`}
+                      src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${collection.imgSrc}`}
                       alt={collection.title}
                       width={192}
                       height={192}
