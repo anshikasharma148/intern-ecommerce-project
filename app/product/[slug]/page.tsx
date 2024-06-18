@@ -42,7 +42,7 @@ const ProductDetails = () => {
           {/* Layout adjustment */}
           <div className="flex-1">
             <Image
-              src='/jacket.jpg'
+              src="/jacket.jpg"
               alt="jacket img"
               width={400}
               height={533}

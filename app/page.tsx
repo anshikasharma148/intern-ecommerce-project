@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <div className="relative">
       <Hero storebanner={homePageData.storeBanners} />
-      <Collection collections={collection}/>
+      <Collection collections={collection} />
       <ProductCard />
     </div>
   );

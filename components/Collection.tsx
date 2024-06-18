@@ -1,19 +1,18 @@
-// src/components/Collection.tsx
-'use client'
+'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Pagination, Autoplay } from 'swiper/modules';
-import { CollectionData } from '../../models/collection';
+import {Pagination, Autoplay} from 'swiper/modules';
+import {CollectionData} from '../models/collection';
 
 type CollectionProps = {
   collections: CollectionData[];
 };
 
-const Collection: React.FC<CollectionProps> = ({ collections }) => {
+const Collection: React.FC<CollectionProps> = ({collections}) => {
   // Adjust the number of circles per row based on the screen size
   const circlesPerRow = {
     xl: 5,
@@ -39,10 +38,9 @@ const Collection: React.FC<CollectionProps> = ({ collections }) => {
         modules={[Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 5000 }}
-        className="mt-8 mx-auto max-w-screen-lg"
-        style={{ height: '50vh' }} // Reduced height to fit within screen
+        pagination={{clickable: true}}
+        autoplay={{delay: 5000}}
+        className="mt-8 mx-auto max-w-screen-lg h-[50vh]" // Reduced height to fit within screen
       >
         {groupedCollections.map((group, slideIndex) => (
           <SwiperSlide key={slideIndex}>
@@ -50,8 +48,7 @@ const Collection: React.FC<CollectionProps> = ({ collections }) => {
               {group.map((collection, index) => (
                 <div
                   key={index}
-                  className={`flex flex-col items-center md:mt-8 group`}
-                  style={{ marginBottom: '1rem' }}
+                  className="flex flex-col items-center md:mt-8 group mb-4"
                 >
                   <div className="w-48 h-48 rounded-full overflow-hidden transform transition-transform duration-300 group-hover:scale-110">
                     <Image
@@ -71,27 +68,24 @@ const Collection: React.FC<CollectionProps> = ({ collections }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <style jsx global>{`
+      <style
+        jsx
+        global
+      >{`
         .swiper-pagination {
-          bottom: 20px; /* Adjusted position */
-          left: 0;
-          right: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @apply bottom-5 left-0 right-0 flex justify-center items-center;
         }
 
         .swiper-pagination-bullet {
-          background-color: black !important; /* Non-filled bullets */
+          background-color: black !important;
           opacity: 1 !important;
           width: 12px;
           height: 12px;
           margin: 0 4px;
-          
         }
 
         .swiper-pagination-bullet-active {
-          background-color: #ff6600 !important; /* Filled active bullet */
+          background-color: #ff6600 !important;
           width: 12px;
           height: 12px;
         }

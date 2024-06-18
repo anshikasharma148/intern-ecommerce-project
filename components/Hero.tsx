@@ -4,30 +4,29 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Autoplay } from 'swiper/modules';
-import { Pagination } from 'swiper/modules';
+import {Autoplay} from 'swiper/modules';
+import {Pagination} from 'swiper/modules';
 
-import { BannerImage } from 'E:/intern-ecommerce-project/models/banner';
+import {BannerImage} from 'E:/intern-ecommerce-project/models/banner';
 
 interface HeroProps {
   storebanner: BannerImage[];
 }
 
-const Hero: React.FC<HeroProps> = ({ storebanner }) => {
-
+const Hero: React.FC<HeroProps> = ({storebanner}) => {
   return (
     <div className="relative">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 5000 }}
-        style={{ height: '100vh' }}
+        pagination={{clickable: true}}
+        autoplay={{delay: 5000}}
+        style={{height: '100vh'}}
       >
         {storebanner.map((banner, index) => (
           <SwiperSlide key={index}>
@@ -49,7 +48,10 @@ const Hero: React.FC<HeroProps> = ({ storebanner }) => {
         ))}
       </Swiper>
       <div className="swiper-pagination" /> {/* Pagination container */}
-      <style jsx global>{`
+      <style
+        jsx
+        global
+      >{`
         @keyframes slide-up {
           from {
             transform: translateY(100%);

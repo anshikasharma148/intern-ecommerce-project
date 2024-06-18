@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import Image, { StaticImageData } from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Image, {StaticImageData} from 'next/image';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import {Navigation, Pagination, Autoplay, EffectFade} from 'swiper/modules';
 
 // Import images
 import mens from 'E:/intern-ecommerce-project/public/Men/man.jpg';
@@ -53,109 +53,139 @@ interface SectionProps {
 
 export default function Collection() {
   const mensCollections: CollectionItem[] = [
-    { title: "Men's Fashion", imgSrc: mens },
-    { title: "Men's Clothing", imgSrc: clothing },
-    { title: "Men's Accessories", imgSrc: access },
-    { title: "Men's Shoes", imgSrc: shoes },
-    { title: "Men's Formal Wear", imgSrc: formal },
+    {title: "Men's Fashion", imgSrc: mens},
+    {title: "Men's Clothing", imgSrc: clothing},
+    {title: "Men's Accessories", imgSrc: access},
+    {title: "Men's Shoes", imgSrc: shoes},
+    {title: "Men's Formal Wear", imgSrc: formal},
   ];
 
   const womensCollections: CollectionItem[] = [
-    { title: "Women's Fashion", imgSrc: ladies },
-    { title: "Women's Clothing", imgSrc: cloth },
-    { title: "Women's Accessories", imgSrc: waccess },
-    { title: "Women's Shoes", imgSrc: wshoes },
-    { title: "Women's Dresses", imgSrc: dress },
+    {title: "Women's Fashion", imgSrc: ladies},
+    {title: "Women's Clothing", imgSrc: cloth},
+    {title: "Women's Accessories", imgSrc: waccess},
+    {title: "Women's Shoes", imgSrc: wshoes},
+    {title: "Women's Dresses", imgSrc: dress},
   ];
 
   const kidsCollections: CollectionItem[] = [
-    { title: "Kids' Fashion", imgSrc: kids },
-    { title: "Boys' Wear", imgSrc: boys },
-    { title: "Girls' Wear", imgSrc: kcloth },
-    { title: "Kids' Accessories", imgSrc: kaccess },
-    { title: "Kids' Shoes", imgSrc: kshoes },
+    {title: "Kids' Fashion", imgSrc: kids},
+    {title: "Boys' Wear", imgSrc: boys},
+    {title: "Girls' Wear", imgSrc: kcloth},
+    {title: "Kids' Accessories", imgSrc: kaccess},
+    {title: "Kids' Shoes", imgSrc: kshoes},
   ];
 
   const beautyCollections: CollectionItem[] = [
-    { title: "Beauty Products", imgSrc: beauty },
-    { title: "Makeup", imgSrc: makeup },
-    { title: "Skincare", imgSrc: skin },
-    { title: "Haircare", imgSrc: hair },
-    { title: "Fragrances", imgSrc: frag },
+    {title: 'Beauty Products', imgSrc: beauty},
+    {title: 'Makeup', imgSrc: makeup},
+    {title: 'Skincare', imgSrc: skin},
+    {title: 'Haircare', imgSrc: hair},
+    {title: 'Fragrances', imgSrc: frag},
   ];
 
   const appliancesCollections: CollectionItem[] = [
-    { title: "Electrical Appliances", imgSrc: elec },
-    { title: "Kitchen Appliances", imgSrc: kitchen },
-    { title: "Home Appliances", imgSrc: home },
-    { title: "Personal Care Appliances", imgSrc: personal },
-    { title: "Gadgets & Accessories", imgSrc: gadgets },
+    {title: 'Electrical Appliances', imgSrc: elec},
+    {title: 'Kitchen Appliances', imgSrc: kitchen},
+    {title: 'Home Appliances', imgSrc: home},
+    {title: 'Personal Care Appliances', imgSrc: personal},
+    {title: 'Gadgets & Accessories', imgSrc: gadgets},
   ];
 
   const technologyCollections: CollectionItem[] = [
-    { title: "Technology", imgSrc: tech },
-    { title: "Mobile Phones", imgSrc: mobile },
-    { title: "Computers & Laptops", imgSrc: laptop },
-    { title: "Tablets & E-Readers", imgSrc: tablet },
-    { title: "Gaming", imgSrc: gaming },
+    {title: 'Technology', imgSrc: tech},
+    {title: 'Mobile Phones', imgSrc: mobile},
+    {title: 'Computers & Laptops', imgSrc: laptop},
+    {title: 'Tablets & E-Readers', imgSrc: tablet},
+    {title: 'Gaming', imgSrc: gaming},
   ];
 
   return (
     <div className="text-center py-16 max-w-[1200px] 2xl:max-w-[1440px]">
       <h2 className="text-4xl font-bold py-4 ml-[4rem]">Shop by Collections</h2>
-      <p className="text-slate-400 max-w-xl text-center pb-2 ml-[29rem]">Explore our wide range of collections</p>
+      <p className="text-slate-400 max-w-xl text-center pb-2 ml-[29rem]">
+        Explore our wide range of collections
+      </p>
 
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         spaceBetween={30}
         slidesPerView={1}
         navigation
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        pagination={{clickable: true}}
+        autoplay={{delay: 3000}}
         effect="fade"
         className="swiper-container mb-16"
       >
-        {mensCollections.concat(womensCollections, kidsCollections, beautyCollections, appliancesCollections, technologyCollections).map((collection, index) => (
-          <SwiperSlide key={index}>
-            <div className="relative">
-              <Image
-                src={collection.imgSrc}
-                alt={collection.title}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <h3 className="text-white text-2xl font-semibold">{collection.title}</h3>
+        {mensCollections
+          .concat(
+            womensCollections,
+            kidsCollections,
+            beautyCollections,
+            appliancesCollections,
+            technologyCollections
+          )
+          .map((collection, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative">
+                <Image
+                  src={collection.imgSrc}
+                  alt={collection.title}
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-lg shadow-lg transition-transform duration-500 transform hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-white text-2xl font-semibold">
+                    {collection.title}
+                  </h3>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ))}
       </Swiper>
 
       {/* Men's Wear Section */}
-      <Section title="Men's Wear" collections={mensCollections} />
+      <Section
+        title="Men's Wear"
+        collections={mensCollections}
+      />
 
       {/* Women's Wear Section */}
-      <Section title="Women's Wear" collections={womensCollections} />
+      <Section
+        title="Women's Wear"
+        collections={womensCollections}
+      />
 
       {/* Kids' Wear Section */}
-      <Section title="Kids' Wear" collections={kidsCollections} />
+      <Section
+        title="Kids' Wear"
+        collections={kidsCollections}
+      />
 
       {/* Beauty Products Section */}
-      <Section title="Beauty Products" collections={beautyCollections} />
+      <Section
+        title="Beauty Products"
+        collections={beautyCollections}
+      />
 
       {/* Electrical Appliances Section */}
-      <Section title="Electrical Appliances" collections={appliancesCollections} />
+      <Section
+        title="Electrical Appliances"
+        collections={appliancesCollections}
+      />
 
       {/* Technology Section */}
-      <Section title="Technology" collections={technologyCollections} />
+      <Section
+        title="Technology"
+        collections={technologyCollections}
+      />
     </div>
   );
 }
 
 // Section component to render subcollections
-function Section({ title, collections }: SectionProps) {
+function Section({title, collections}: SectionProps) {
   // Adjust the number of circles per row based on the screen size
   const circlesPerRow = {
     xl: 5,
@@ -179,8 +209,8 @@ function Section({ title, collections }: SectionProps) {
         spaceBetween={20}
         slidesPerView={1}
         navigation
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 5000 }}
+        pagination={{clickable: true}}
+        autoplay={{delay: 5000}}
         className="mt-8"
       >
         {groupedCollections.map((group, index) => (
