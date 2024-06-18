@@ -9,8 +9,8 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        primary:['font-family: "Poppins", sans-serif;']
+      fontFamily: {
+        primary: ['font-family: "Poppins", sans-serif;'],
       },
     },
   },
