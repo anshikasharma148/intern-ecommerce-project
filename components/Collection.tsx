@@ -1,23 +1,25 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import {Swiper, SwiperSlide} from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import {Pagination, Autoplay} from 'swiper/modules';
-import {CollectionData} from '../models/collection';
+import { Pagination, Autoplay } from 'swiper/modules';
+import { CollectionData } from '../models/collection';
 
 type CollectionProps = {
   collections: CollectionData[];
 };
 
-const Collection: React.FC<CollectionProps> = ({collections}) => {
+const Collection: React.FC<CollectionProps> = ({ collections }) => {
   // Adjust the number of circles per row based on the screen size
   const circlesPerRow = {
     xl: 5,
-    md: 2,
-    sm: 1,
+    lg: 4,
+    md: 3,
+    sm: 2,
+    xs: 1,
   };
 
   // Split collections into groups based on circles per row
@@ -38,19 +40,19 @@ const Collection: React.FC<CollectionProps> = ({collections}) => {
         modules={[Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
-        pagination={{clickable: true}}
-        autoplay={{delay: 5000}}
-        className="mt-8 mx-auto max-w-screen-lg h-[50vh]" // Reduced height to fit within screen
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 5000 }}
+        className="mt-8 mx-auto max-w-screen-lg h-auto"
       >
         {groupedCollections.map((group, slideIndex) => (
           <SwiperSlide key={slideIndex}>
-            <div className="flex justify-center md:grid md:grid-cols-5 md:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {group.map((collection, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center md:mt-8 group mb-4"
+                  className="flex flex-col items-center group mb-4"
                 >
-                  <div className="w-48 h-48 rounded-full overflow-hidden transform transition-transform duration-300 group-hover:scale-110">
+                  <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden transform transition-transform duration-300 group-hover:scale-110">
                     <Image
                       src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${collection.featureImage}`}
                       alt={collection.title}
