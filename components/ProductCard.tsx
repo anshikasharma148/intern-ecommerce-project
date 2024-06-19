@@ -1,25 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
+import { Product } from '../models/product';
 
-// Import product images
-
-// Define product interface
-interface Product {
-  name: string;
-  image: string;
-  price: number;
-  oldPrice?: number | null;
+interface ProductProps {
+  product: Product;
 }
 
 const cardClasses =
-  'overflow-hidden rounded-lg shadow-lg transition-transform transform group-hover:scale-105 relative';
+  'overflow-hidden rounded-lg shadow-lg transition-transform transform group-hover relative';
 const priceClasses = 'text-red-800 font-bold';
 const discountPriceClasses = 'line-through text-zinc-500';
 const discountBadgeClasses =
   'absolute top-2 left-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded';
 
-const ProductCard: React.FC<{product: Product}> = ({product}) => {
-  const {name, image, price, oldPrice} = product;
+const ProductCard: React.FC<ProductProps> = ({ product }) => {
+  const { title, featureImage, salesPrice, price } = product;
 
   return (
     <div
@@ -31,19 +26,16 @@ const ProductCard: React.FC<{product: Product}> = ({product}) => {
         margin: '10px',
       }}
     >
-      <div
-        className="relative"
-        style={{height: '70%'}}
-      >
+      <div className="relative overflow-hidden" style={{ height: '70%' }}>
         <Image
-          src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${image}`}
-          alt={name}
+          src={`https://${process.env.NEXT_PUBLIC_CDN_ADDRESS}/${featureImage}`}
+          alt={title}
           layout="fill"
           className="object-cover transition-transform transform group-hover:scale-110 duration-300 ease-in-out"
         />
-        {oldPrice && (
+        {price && (
           <span className={discountBadgeClasses}>
-            {Math.round(((oldPrice - price) / oldPrice) * 100)}% Off
+            {Math.round(((price - salesPrice) / price) * 100)}% Off
           </span>
         )}
         <button className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md transition-colors duration-300 hover:bg-black group">
@@ -73,27 +65,25 @@ const ProductCard: React.FC<{product: Product}> = ({product}) => {
             </g>
           </svg>
         </button>
-
+        
         <button
           className="absolute bottom-0 left-0 w-[calc(100%-30px)] bg-black text-white py-2 px-4 rounded opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 duration-300 ease-in-out"
-          style={{marginLeft: '15px', marginRight: '15px'}}
+          style={{ marginLeft: '15px', marginRight: '15px' }}
         >
           Add to Cart
         </button>
+        
       </div>
-      <div
-        className="p-4"
-        style={{height: '40%'}}
-      >
+      <div className="p-4" style={{ height: '40%' }}>
         <h3 className="text-lg font-bold cursor-pointer hover:text-orange-500">
-          {name}
+          {title}
         </h3>
         <div className="flex items-center justify-between mt-2">
           <div className="flex">
-            <span className={`${priceClasses} mr-2 `}>${price}</span>
-            {oldPrice && (
-              <span className={`${discountPriceClasses} font-bold `}>
-                ${oldPrice}
+            <span className={`${priceClasses} mr-2`}> ₹{salesPrice}</span>
+            {price && (
+              <span className={`${discountPriceClasses} font-bold`}>
+                 ₹{price}
               </span>
             )}
           </div>
@@ -103,50 +93,4 @@ const ProductCard: React.FC<{product: Product}> = ({product}) => {
   );
 };
 
-const ProductGrid: React.FC<{products: Product[]}> = ({products}) => {
-  return (
-    <div className="max-w-[1200px] 2xl:max-w-[1440px] mx-auto px-8 py-8">
-      <h2 className="text-4xl font-bold py-4 text-center">
-        New Arrival Products
-      </h2>
-      <p className="text-slate-400 max-w-xl mx-auto text-center pb-2">
-        Shop the latest products from the most popular collections
-      </p>
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-x-4 gap-y-8">
-        {products.map((product, index) => (
-          <ProductCard
-            key={index}
-            product={product}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const sampleProducts: Product[] = [
-  {name: 'T-Shirt', image: '/tshirt.jpg', price: 16, oldPrice: 21},
-  {
-    name: 'Fashion Shoes Sneaker',
-    image: '/tshirt.jpg',
-    price: 18,
-    oldPrice: null,
-  },
-  {
-    name: 'Mens White Slip Shoes',
-    image: '/tshirt.jpg',
-    price: 20,
-    oldPrice: 25,
-  },
-  {name: 'Ladies Luxurious Bag', image: '/tshirt.jpg', price: 22, oldPrice: 27},
-  {name: 'Ladies Green Top', image: '/tshirt.jpg', price: 22, oldPrice: 27},
-  {name: 'Ladies Onepiece Wear', image: '/tshirt.jpg', price: 22, oldPrice: 27},
-  {name: 'Mens Brown Jacket', image: '/tshirt.jpg', price: 22, oldPrice: 27},
-  {name: 'Sweater T-Shirt', image: '/tshirt.jpg', price: 22, oldPrice: 27},
-];
-
-const App: React.FC = () => {
-  return <ProductGrid products={sampleProducts} />;
-};
-
-export default App;
+export default ProductCard;
