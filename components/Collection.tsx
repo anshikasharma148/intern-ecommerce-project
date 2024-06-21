@@ -1,18 +1,18 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Pagination, Autoplay } from 'swiper/modules';
-import { CollectionData } from '../models/collection';
+import {Pagination, Autoplay} from 'swiper/modules';
+import {CollectionData} from '../models/collection';
 
 type CollectionProps = {
   collections: CollectionData[];
 };
 
-const Collection: React.FC<CollectionProps> = ({ collections }) => {
+const Collection: React.FC<CollectionProps> = ({collections}) => {
   // Adjust the number of circles per row based on the screen size
   const circlesPerRow = {
     xl: 5,
@@ -40,8 +40,8 @@ const Collection: React.FC<CollectionProps> = ({ collections }) => {
         modules={[Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={1}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 5000 }}
+        pagination={{clickable: true}}
+        autoplay={{delay: 5000}}
         className="mt-8 mx-auto max-w-screen-lg h-auto"
       >
         {groupedCollections.map((group, slideIndex) => (
