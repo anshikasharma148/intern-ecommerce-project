@@ -11,7 +11,7 @@ export default function Page() {
     <div className="relative">
       <Hero storebanner={storebanner} />
       <Collection collections={collections} />
-      <div className="max-w-[1200px] 2xl:max-w-[1440px] mx-auto px-8 py-8">
+      <div className="max-w-[1200px] 2xl:max-w-[1440px] mx-auto px-4 py-8">
         <h2 className="text-4xl font-bold py-4 text-center">
           New Arrival Products
         </h2>
@@ -20,15 +20,10 @@ export default function Page() {
         </p>
         {collections.map((collection) => (
           <div key={collection.id}>
-            <h2 className="text-2xl font-bold py-6">
-              {collection.title}
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-4">
+            <h2 className="text-2xl font-bold py-6">{collection.title}</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {collection.Product.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                />
+                <ProductCard key={product.id} product={product} />
               ))}
             </div>
           </div>
