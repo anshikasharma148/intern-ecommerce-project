@@ -1,4 +1,7 @@
+// src/components/Collection.tsx
+
 'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -32,8 +35,10 @@ const Collection: React.FC<CollectionProps> = ({collections}) => {
 
   return (
     <div className="text-center py-16 relative">
-      <h2 className="text-4xl font-bold py-4">Shop The Collections</h2>
-      <p className="text-slate-400 max-w-xl mx-auto text-center pb-6 mb-4">
+      <h2 className="text-4xl font-bold py-4 text-[var(--primary-color)]">
+        Shop The Collections
+      </h2>
+      <p className="text-[var(--subtext-hover)] max-w-xl mx-auto text-center pb-6 mb-4">
         Shop the latest products from the most popular collections
       </p>
       <Swiper
@@ -61,7 +66,7 @@ const Collection: React.FC<CollectionProps> = ({collections}) => {
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <p className="mt-4 text-lg font-medium transition-colors duration-300 group-hover:text-orange-500 cursor-pointer">
+                  <p className="mt-4 text-lg font-medium text-[var(--primary-color)] transition-colors duration-300 group-hover:text-[var(--hover-color)] cursor-pointer">
                     {collection.title}
                   </p>
                 </div>
@@ -79,7 +84,9 @@ const Collection: React.FC<CollectionProps> = ({collections}) => {
         }
 
         .swiper-pagination-bullet {
-          background-color: black !important;
+          background-color: var(
+            --primary-color
+          ) !important; /* Using dynamic color */
           opacity: 1 !important;
           width: 12px;
           height: 12px;
@@ -87,7 +94,9 @@ const Collection: React.FC<CollectionProps> = ({collections}) => {
         }
 
         .swiper-pagination-bullet-active {
-          background-color: #ff6600 !important;
+          background-color: var(
+            --hover-color
+          ) !important; /* Using dynamic color */
           width: 12px;
           height: 12px;
         }

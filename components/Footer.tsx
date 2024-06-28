@@ -292,9 +292,9 @@ const features = [
 ];
 
 const footerClasses = {
-  container: 'bg-zinc-900 text-zinc-300 p-8',
+  container: 'bg-[var(--primary-color)] text-[var(--zinc-300)] p-8',
   grid: 'max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8',
-  border: 'border-t border-zinc-700 mt-8 pt-8',
+  border: 'border-t border-[var(--zinc-700)] mt-8 pt-8',
   featureGrid:
     'max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 text-center md:text-left',
   featureItem: 'flex items-center justify-center md:justify-start space-x-2',
@@ -307,7 +307,9 @@ const Footer = () => {
         className={`${footerClasses.grid} max-w-[1200px] 2xl:max-w-[1440px]`}
       >
         <div className="md:ml-[7rem]">
-          <h2 className="text-xl font-bold text-white">Cartzio</h2>
+          <h2 className="text-xl font-bold text-[var(--secondary-color)]">
+            Cartzio
+          </h2>
           <p className="mt-4">
             Upgrade your style with our curated sets. Choose confidence, embrace
             your unique look.
@@ -337,7 +339,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="md:ml-[8rem]">
-          <h2 className="text-xl font-bold text-white">Shopping & Clothes</h2>
+          <h2 className="text-xl font-bold text-[var(--secondary-color)]">
+            Shopping & Clothes
+          </h2>
           <div className="grid grid-cols-2 gap-4 mt-4">
             {footerLinks.slice(0, 6).map((link, index) => (
               <ul key={index}>
@@ -366,7 +370,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="md:ml-[7rem]">
-          <h2 className="text-xl font-bold text-white">Customer Service</h2>
+          <h2 className="text-xl font-bold text-[var(--secondary-color)]">
+            Customer Service
+          </h2>
           <ul className="grid grid-cols-1 gap-4 mt-4">
             {footerLinks.slice(12).map((link, index) => (
               <li key={index}>
@@ -395,7 +401,8 @@ const Footer = () => {
         </div>
         <p className="text-center mt-8">
           &copy; 2024 Cartzio. Design with{' '}
-          <span className="text-red-500">♥</span> by Shreethemes.
+          <span className="text-[var(--sales-price-color)]">♥</span> by Digital
+          Umbrella.
         </p>
       </div>
     </footer>
