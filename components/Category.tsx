@@ -2,20 +2,20 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { CollectionData } from '../models/category'; 
+import {CollectionData} from '../models/category';
 
 type CategoryProps = {
   collections: CollectionData[];
 };
 
-const Category: React.FC<CategoryProps> = ({ collections }) => {
+const Category: React.FC<CategoryProps> = ({collections}) => {
   return (
     <div className="text-center py-16 relative">
       <div className="max-w-[1200px] 2xl:max-w-[1440px] mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold py-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold py-4 text-[var(--primary-color)]">
           Shop All Categories
         </h2>
-        <p className="text-sm sm:text-base md:text-lg text-slate-400 max-w-xl mx-auto text-center pb-6 mb-4">
+        <p className="text-sm sm:text-base md:text-lg text-[var(--subtext-hover)] max-w-xl mx-auto text-center pb-6 mb-4">
           Shop the latest products from the most popular collections
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
@@ -33,7 +33,7 @@ const Category: React.FC<CategoryProps> = ({ collections }) => {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <p className="mt-4 text-lg font-medium transition-colors duration-300 group-hover:text-orange-500 cursor-pointer">
+              <p className="mt-4 text-lg font-medium transition-colors duration-300 group-hover:text-[var(--hover-color)] cursor-pointer">
                 {collection.title}
               </p>
             </div>

@@ -9,3 +9,26 @@ body {
   margin: 0;
   padding: 0;
 }
+:root {
+  --primary-color: #000000; /* Default black */
+  --secondary-color: #ffffff; /* Default white */
+  --text-color: #000000; /* Default black */
+  --hover-color: #f97316; /* Default orange */
+  --subtext-hover: #94a3b8; /* Default slate-300 */
+  --bg-color: rgba(255, 255, 255, 0.3); /* Default white with opacity */
+  --scroll-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Default shadow for scroll */
+  --sales-price-color: #b91c1c; /* Equivalent to text-red-800 */
+  --stroke-color: #ff8d0a;
+
+  /* color for product page */
+  --red-color: #d61313;
+  --orange-color: #f97316;
+  --blue-color: #0f172a;
+  --gray-color: #d1d5da;
+  --ring-gray: #fff;
+
+  /* Zinc related colors */
+  --zinc-700: #374151; /* Zinc 700 */
+  --zinc-300: #d1d5db; /* Zinc 300 */
+  --zinc-500: #71717a;
+}

@@ -7,9 +7,7 @@ import Image from 'next/image';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-import {Autoplay} from 'swiper/modules';
-import {Pagination} from 'swiper/modules';
+import {Autoplay, Pagination} from 'swiper/modules';
 import {BannerImage} from '@/models/banner';
 
 export default function Hero({storebanner}: {storebanner: BannerImage[]}) {
@@ -33,11 +31,7 @@ export default function Hero({storebanner}: {storebanner: BannerImage[]}) {
                 objectFit="cover"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center animate-slide-up">
-                <div className="text-center  text-white">
-                  {/* Content Here */}
-                </div>
-              </div>
+              <div className="absolute inset-0 flex items-center justify-center animate-slide-up"></div>
             </div>
           </SwiperSlide>
         ))}
@@ -72,7 +66,9 @@ export default function Hero({storebanner}: {storebanner: BannerImage[]}) {
         }
 
         .swiper-pagination-bullet {
-          background-color: white !important; /* White color for non-active bullets */
+          background-color: var(
+            --primary-color
+          ) !important; /* Using dynamic color */
           opacity: 1 !important; /* Ensuring full opacity */
           width: 12px; /* Size adjustments for the bullets */
           height: 12px; /* Size adjustments for the bullets */
@@ -80,7 +76,9 @@ export default function Hero({storebanner}: {storebanner: BannerImage[]}) {
         }
 
         .swiper-pagination-bullet-active {
-          background-color: #ff6600 !important; /* Custom color for the active bullet */
+          background-color: var(
+            --hover-color
+          ) !important; /* Using dynamic color */
           width: 12px; /* Ensure active bullet size is consistent */
           height: 12px; /* Ensure active bullet size is consistent */
         }
